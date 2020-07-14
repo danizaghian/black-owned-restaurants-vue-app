@@ -143,10 +143,12 @@ export default {
     };
   },
   created: function() {
-    axios.get("/api/restaurants").then(response => {
-      console.log("restaurants index", response);
-      this.restaurants = response.data;
-    });
+    axios
+      .get("https://black-owned-restaurants-api.herokuapp.com/api/restaurants")
+      .then(response => {
+        console.log("restaurants index", response);
+        this.restaurants = response.data;
+      });
   },
   methods: {
     resetFilters: function() {
