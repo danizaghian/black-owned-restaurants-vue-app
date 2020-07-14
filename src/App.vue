@@ -1,32 +1,35 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-custom navbar-transparent navbar-fixed-top" role="navigation">
+
+      <div class="container">
+    
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#custom-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">BABOB</a>
+        </div>
+    
+        <div class="collapse navbar-collapse" id="custom-collapse">
+    
+          <ul class="nav navbar-nav navbar-right">
+    
+            <li><router-link to="/">Directory</router-link></li>
+    
+          </ul>
+        </div>
+    
+      </div>
+
+    </nav>
+    <!-- /NAVIGATION -->
     <router-view/>
   </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
