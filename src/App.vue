@@ -6,12 +6,12 @@
       <div class="container">
     
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#custom-collapse">
+          <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#custom-collapse">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-          </button>
+          </button> -->
           <router-link class="navbar-brand" to="/">BABOR</router-link>
         </div>
     
