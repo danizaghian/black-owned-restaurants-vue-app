@@ -107,7 +107,7 @@
                 <p>Offering: {{ restaurant.service }}</p>
                 <p v-if="restaurant.phone">Phone: <a :href="`tel:${restaurant.phone}`">{{ restaurant.phone }}</a></p>
                 <p v-else>No phone provided</p>
-                <p v-if="restaurant.instagram">Insta: {{ restaurant.instagram }}</p>
+                <p v-if="restaurant.instagram">Insta: <a target="_blank" :href="`https://www.instagram.com/${restaurant.instagram.substr(1)}/`">{{ restaurant.instagram }}</a></p>
               </div>
               <div v-if="restaurant.website" class="post-more font-inc">
                 <a :href="restaurant.website" target="_blank" class="more-link">Website</a>
