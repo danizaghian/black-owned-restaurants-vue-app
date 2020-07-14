@@ -12,17 +12,17 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">BABOR</a>
+          <router-link class="navbar-brand" to="/">BABOR</router-link>
         </div>
     
-        <div class="collapse navbar-collapse" id="custom-collapse">
+        <!-- <div class="collapse navbar-collapse" id="custom-collapse">
     
           <ul class="nav navbar-nav navbar-right">
     
             <li><router-link to="/">Directory</router-link></li>
     
           </ul>
-        </div>
+        </div> -->
     
       </div>
 
