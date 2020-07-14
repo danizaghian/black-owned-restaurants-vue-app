@@ -20,6 +20,10 @@
                 Black owned restaurants in the bay area. Search, filter by location, and filter by cuisine type.
               </div>
 
+              <div class="font-inc align-center">
+                <a id="plug" href="https://www.linkedin.com/in/danizaghian/">BY Dani Zaghian</a>
+              </div>
+
             </div>
 
           </div>
@@ -127,6 +131,10 @@
 </template>
 
 <style>
+.bg-dark a#plug:hover,
+.bg-dark a#plug:focus {
+  color: darkviolet;
+}
 </style>
 
 <script>
