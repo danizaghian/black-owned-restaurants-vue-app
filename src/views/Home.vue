@@ -105,7 +105,7 @@
               </div>
               <div class="post-entry">
                 <p>Offering: {{ restaurant.service }}</p>
-                <p v-if="restaurant.phone">Phone: {{ restaurant.phone }}</p>
+                <p v-if="restaurant.phone">Phone: <a :href="`tel:${restaurant.phone}`">{{ restaurant.phone }}</a></p>
                 <p v-else>No phone provided</p>
                 <p v-if="restaurant.instagram">Insta: {{ restaurant.instagram }}</p>
               </div>
