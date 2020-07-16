@@ -14,10 +14,10 @@
 
             <div class="col-sm-6 col-sm-offset-3">
 
-              <h1 class="module-title font-alt align-center">Directory</h1>
+              <h1 class="module-title font-alt align-center">Bay Area Black Owned Restaurants</h1>
 
               <div class="module-subtitle font-inc align-center">
-                Black owned restaurants in the bay area. Search, filter by location, and filter by cuisine type.
+                Search, filter by location, and/or filter by cuisine type.
               </div>
 
               <div class="font-inc align-center">
