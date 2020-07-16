@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!-- NAVIGATION -->
-    <nav class="navbar navbar-custom navbar-transparent navbar-fixed-top" role="navigation">
+    <nav id="totop" class="navbar navbar-custom navbar-transparent navbar-fixed-top" role="navigation">
 
       <div class="container">
     
@@ -28,7 +28,32 @@
 
     </nav>
     <!-- /NAVIGATION -->
-    <router-view/>
+
+    <!-- WRAPPER -->
+	  <div class="wrapper">
+      <router-view/>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+      
+        <div class="container">
+      
+          <div class="row">
+      
+            <div class="font-inc align-center">
+              <a id="plug" href="https://www.linkedin.com/in/danizaghian/">BY Dani Zaghian</a>
+            </div>
+      
+          </div>
+      
+        </div>
+      
+      </footer>
+      <!-- /FOOTER -->
+
+    </div>
+	  <!-- /WRAPPER -->
+    
   </div>
 </template>
 

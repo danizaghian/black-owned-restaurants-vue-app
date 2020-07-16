@@ -14,14 +14,10 @@
 
             <div class="col-sm-6 col-sm-offset-3">
 
-              <h1 class="module-title font-alt align-center">Bay Area Black Owned Restaurants</h1>
+              <h1 class="module-title font-alt align-center">List</h1>
 
               <div class="module-subtitle font-inc align-center">
-                Search, filter by location, and/or filter by cuisine type.
-              </div>
-
-              <div class="font-inc align-center">
-                <a id="plug" href="https://www.linkedin.com/in/danizaghian/">BY Dani Zaghian</a>
+                Bay area black owned restaurants in a filterable, searchable list view.
               </div>
 
             </div>
@@ -94,28 +90,28 @@
           
           <div class="p-t-40 row multi-columns-row post-columns">
 
-          <!-- POST ITEM -->
-          <div v-for="restaurant in filterBy(filterBy(filterBy(restaurants, searchFilter), cuisineType), locationType)" class="col-xs-6 col-md-3 col-lg-3">
-            <div class="post">
-              <div class="post-header">
-                <h2 class="post-title font-alt"><a target="_blank" :href="restaurant.website">{{ restaurant.name }}</a></h2>
-                <div class="post-meta font-inc">
-                  <a v-on:click="locationType = restaurant.location">{{ restaurant.location }}</a> | {{ restaurant.cuisine }}
+            <!-- POST ITEM -->
+            <div v-for="restaurant in filterBy(filterBy(filterBy(restaurants, searchFilter), cuisineType), locationType)" class="col-xs-6 col-md-3 col-lg-3">
+              <div class="post">
+                <div class="post-header">
+                  <h2 class="post-title font-alt"><a target="_blank" :href="restaurant.website">{{ restaurant.name }}</a></h2>
+                  <div class="post-meta font-inc">
+                    <a v-on:click="locationType = restaurant.location">{{ restaurant.location }}</a> | {{ restaurant.cuisine }}
+                  </div>
                 </div>
+                <div class="post-entry">
+                  <p>Offering: {{ restaurant.service }}</p>
+                  <p v-if="restaurant.phone">Phone: <a :href="`tel:${restaurant.phone}`">{{ restaurant.phone }}</a></p>
+                  <p v-else>No phone provided</p>
+                  <p v-if="restaurant.instagram">Insta: <a target="_blank" :href="`https://www.instagram.com/${restaurant.instagram.substr(1)}/`">{{ restaurant.instagram }}</a></p>
+                </div>
+                <div v-if="restaurant.website" class="post-more font-inc">
+                  <a :href="restaurant.website" target="_blank" class="more-link">Website</a>
+                </div>
+                <div v-else class="post-more font-inc"><a :href="`http://www.google.com/search?q=${restaurant.name}`" target="_blank">Google Search</a></div>
               </div>
-              <div class="post-entry">
-                <p>Offering: {{ restaurant.service }}</p>
-                <p v-if="restaurant.phone">Phone: <a :href="`tel:${restaurant.phone}`">{{ restaurant.phone }}</a></p>
-                <p v-else>No phone provided</p>
-                <p v-if="restaurant.instagram">Insta: <a target="_blank" :href="`https://www.instagram.com/${restaurant.instagram.substr(1)}/`">{{ restaurant.instagram }}</a></p>
-              </div>
-              <div v-if="restaurant.website" class="post-more font-inc">
-                <a :href="restaurant.website" target="_blank" class="more-link">Website</a>
-              </div>
-              <div v-else class="post-more font-inc"><a :href="`http://www.google.com/search?q=${restaurant.name}`" target="_blank">Google Search</a></div>
             </div>
-          </div>
-          <!-- /POST ITEM -->
+            <!-- /POST ITEM -->
 
           </div>
 
