@@ -127,7 +127,26 @@ export default {
       searchFilter: "",
       cuisineType: "",
       locationType: "",
-      map: {}
+      map: {},
+      center: [-122.4194, 37.7749],
+      zoom: 9,
+      cityCenters: {
+        Alameda: [-122.2822, 37.7799],
+        Albany: [-122.2978, 37.8867],
+        Antioch: [-121.8058, 38.0049],
+        Berkeley: [-122.273, 37.8715],
+        Concord: [-122.0311, 37.978],
+        DalyCity: [-122.4702, 37.6879],
+        Emeryville: [-122.2892, 37.8395],
+        Fairfield: [-122.0405, 38.2492],
+        Fremont: [-121.9886, 37.5485],
+        Hayward: [-122.081, 37.6688],
+        Healdsburg: [-122.8692, 38.6105],
+        Oakland: [-122.2712, 37.8044],
+        PaloAlto: [-122.143, 37.4419],
+        Richmond: [-122.3477, 37.9358],
+        SanFrancisco: [-122.4194, 37.7749]
+      }
     };
   },
   created: function() {},
@@ -140,6 +159,8 @@ export default {
       this.searchFilter = "";
       this.cuisineType = "";
       this.locationType = "";
+      this.center = [-122.4194, 37.7749];
+      this.zoom = 9;
     },
     initializeMap: function() {
       axios
@@ -152,9 +173,9 @@ export default {
           mapboxgl.accessToken = process.env.VUE_APP_MAPBOX_API_KEY;
           this.map = new mapboxgl.Map({
             container: "map", // container id
-            style: "mapbox://styles/dzaghian/ck1uzqv8o7muc1do8008p7mst", // stylesheet location
-            center: [-122.4194, 37.7749], // starting position [lng, lat]
-            zoom: 9 // starting zoom
+            style: "mapbox://styles/dzaghian/ckcpah5qq091l1jp8g2f4p60y", // stylesheet location
+            center: this.center, // starting position [lng, lat]
+            zoom: this.zoom // starting zoom
           });
           this.restaurants.forEach(restaurant => {
             if (restaurant.address) {
@@ -172,11 +193,16 @@ export default {
         });
     },
     filterMarkers: function() {
+      // reinstantiate map
+      if (this.locationType) {
+        this.center = this.cityCenters[this.locationType.replace(/\s/g, "")];
+        this.zoom = 12;
+      }
       this.map = new mapboxgl.Map({
         container: "map", // container id
-        style: "mapbox://styles/dzaghian/ck1uzqv8o7muc1do8008p7mst", // stylesheet location
-        center: [-122.4194, 37.7749], // starting position [lng, lat]
-        zoom: 9 // starting zoom
+        style: "mapbox://styles/dzaghian/ckcpah5qq091l1jp8g2f4p60y", // stylesheet location
+        center: this.center, // starting position [lng, lat]
+        zoom: this.zoom // starting zoom
       });
 
       this.filterBy(
