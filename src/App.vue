@@ -15,14 +15,15 @@
           <router-link class="navbar-brand" to="/">BABOR</router-link>
         </div>
     
-        <!-- <div class="collapse navbar-collapse" id="custom-collapse">
+        <div class="collapse navbar-collapse" id="custom-collapse">
     
           <ul class="nav navbar-nav navbar-right">
     
-            <li><router-link to="/">Directory</router-link></li>
+            <li><router-link to="/">List</router-link></li>
+            <li><router-link to="/map">Map</router-link></li>
     
           </ul>
-        </div> -->
+        </div>
     
       </div>
 
