@@ -4,7 +4,7 @@
     <div class="wrapper">
 
       <!-- HOME -->
-      <section class="module module-header bg-dark bg-dark-50" data-background="/assets/images/post-1.jpg">
+      <section class="module module-header bg-dark bg-dark-50" data-background="">
 
         <div class="container">
 
@@ -12,12 +12,12 @@
           <div class="row">
             
 
-            <div class="col-sm-6 col-sm-offset-3">
+            <div class="col-sm-8 col-sm-offset-2">
 
               <h1 class="module-title font-alt align-center">List</h1>
 
               <div class="module-subtitle font-inc align-center">
-                Bay area black owned restaurants in a filterable, searchable list view.
+                Bay area black owned restaurants in a filterable, searchable list.
               </div>
 
             </div>
@@ -82,7 +82,7 @@
                 </select>
               </div>
               <div class="col-xs-12 col-sm-2 text-center">
-                <button v-on:click="resetFilters()"class="btn btn-d btn-round">Reset</button>
+                <button v-on:click="resetFilters()" class="btn btn-d btn-round">Reset</button>
               </div>
             </div>      
           </div>
@@ -91,7 +91,7 @@
           <div class="p-t-40 row multi-columns-row post-columns">
 
             <!-- POST ITEM -->
-            <div v-for="restaurant in filterBy(filterBy(filterBy(restaurants, searchFilter), cuisineType), locationType)" class="col-xs-6 col-md-3 col-lg-3">
+            <div v-for="restaurant in filterBy(filterBy(filterBy(restaurants, searchFilter), cuisineType), locationType)" class="col-xs-6 col-md-4 col-lg-4">
               <div class="post">
                 <div class="post-header">
                   <h2 class="post-title font-alt"><a target="_blank" :href="restaurant.website">{{ restaurant.name }}</a></h2>

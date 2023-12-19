@@ -4,7 +4,7 @@
     <div class="wrapper">
 
       <!-- HOME -->
-      <section class="module module-header bg-dark bg-dark-50" data-background="/assets/images/section-7.jpg">
+      <section class="module module-header bg-dark bg-dark-50" data-background="">
 
         <div class="container">
 
@@ -12,12 +12,12 @@
           <div class="row">
             
 
-            <div class="col-sm-6 col-sm-offset-3">
+            <div class="col-sm-8 col-sm-offset-2">
 
               <h1 class="module-title font-alt align-center">Map</h1>
 
               <div class="module-subtitle font-inc align-center">
-                Bay area black owned restaurants in a filterable, searchable map view.
+                Bay area black owned restaurants in a filterable, searchable map.
               </div>
 
             </div>

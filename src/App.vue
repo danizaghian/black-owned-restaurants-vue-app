@@ -58,4 +58,11 @@
   </div>
 </template>
 
+<style>
+.container {
+  padding-right: 100px;
+  padding-left: 100px;
+}
+</style>
+
 
